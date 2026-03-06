@@ -4,13 +4,17 @@ import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.util.StringTokenizer
 
-// A+B
-fun main()  {
+fun main() {
     val br = BufferedReader(InputStreamReader(System.`in`))
+    val sb = StringBuilder()
     val st = StringTokenizer(br.readLine())
 
-    val a = st.nextToken().toInt()
-    val b = st.nextToken().toInt()
+    var result = 0;
 
-    println(a+b)
+    while (st.hasMoreTokens()) {
+        var token = st.nextToken().toInt()
+        result += token*token
+    }
+    println(result%10)
+
 }
