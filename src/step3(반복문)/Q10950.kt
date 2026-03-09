@@ -1,4 +1,4 @@
-package step3
+package `step3(반복문)`
 
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -6,17 +6,16 @@ import java.util.StringTokenizer
 
 fun main() {
     val br = BufferedReader(InputStreamReader(System.`in`))
-    var sb = StringBuilder()
+    val sb = StringBuilder()
 
-    while(true) {
+    val t = br.readLine().toInt()
+
+    repeat(t) {
         val st = StringTokenizer(br.readLine())
-        val a: Int = st.nextToken().toInt()
-        val b: Int = st.nextToken().toInt()
-
-        if (a == 0 && b ==0) break
+        val a = st.nextToken().toInt()
+        val b = st.nextToken().toInt()
 
         sb.append(a+b).append('\n')
     }
-
     println(sb)
 }

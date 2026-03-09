@@ -1,4 +1,4 @@
-package step3
+package `step3(반복문)`
 
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -9,8 +9,7 @@ fun main() {
 
     val n = br.readLine().toInt()
 
-    repeat(9) {
-        sb.append("$n * ${it+1} = ${n*(it+1)}").append("\n")
-    }
+    sb.append("long ".repeat(n/4)).append("int ")
+
     println(sb)
 }

@@ -1,4 +1,4 @@
-package step4
+package `step4(1차원_배열)`
 
 import java.io.BufferedReader
 import java.io.InputStreamReader
