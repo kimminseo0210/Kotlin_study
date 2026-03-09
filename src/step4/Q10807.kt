@@ -1,4 +1,4 @@
-package class1
+package step4
 
 import java.io.BufferedReader
 import java.io.InputStreamReader

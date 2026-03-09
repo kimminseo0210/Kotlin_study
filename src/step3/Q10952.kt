@@ -1,4 +1,4 @@
-package class1
+package step3
 
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -9,12 +9,11 @@ fun main() {
     var sb = StringBuilder()
 
     while(true) {
-        val line = br.readLine() ?: break
-        val st = StringTokenizer(line)
-        if (!st.hasMoreTokens()) break
+        val st = StringTokenizer(br.readLine())
+        val a: Int = st.nextToken().toInt()
+        val b: Int = st.nextToken().toInt()
 
-        val a = st.nextToken().toInt()
-        val b = st.nextToken().toInt()
+        if (a == 0 && b ==0) break
 
         sb.append(a+b).append('\n')
     }
