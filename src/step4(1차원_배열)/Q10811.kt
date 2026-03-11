@@ -21,15 +21,15 @@ fun main() {
     val n = st.nextToken().toInt() // 바구니 수
     val m = st.nextToken().toInt() // 바꿀 횟수
 
-    val baskets = IntArray(n)
+    val baskets = IntArray(n) { it + 1 }
 
     repeat(m) {
         st = StringTokenizer(br.readLine())
         var start = st.nextToken().toInt()-1
         var end = st.nextToken().toInt()-1
 
-        // 1. while 문
-        while (start < end) {
+        // 1. while 문 (직관적)
+/*        while (start < end) {
             // 값 스왑
             val temp = baskets[start]
             baskets[start] = baskets[end]
@@ -38,9 +38,21 @@ fun main() {
             // 포인터 이동
             start++
             end--
+        }*/
+        // 2. for 문 (수학적 접근)
+        // 범위의 절반만큼만 반복한다
+        val range = ( end - start ) / 2
+        for (i in 0..range) {
+            val temp = baskets[start+i]
+            baskets[start+i] = baskets[end-i]
+            baskets[end-i] = temp
         }
     }
+    // joinToString(" ")으로 사이에 빈칸 채워넣기
+    bw.write(baskets.joinToString(" "))
+    bw.newLine()
 
+    bw.flush()
     br.close()
     bw.close()
 }
