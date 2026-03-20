@@ -12,5 +12,14 @@ fun main() {
 
     // 2차원 배열을 선언하는 방법
     var matrix = Array(n) { IntArray(m) }
-    repeat (n)
+    repeat(2) {
+        repeat (n) { i ->
+            var st = StringTokenizer(br.readLine() ?: "")
+            repeat(m) { j ->
+                matrix[i][j] += st.nextToken().toInt()
+            }
+        }
+    }
+    println(matrix.joinToString("\n") { it.joinToString(" ") })
+
 }
