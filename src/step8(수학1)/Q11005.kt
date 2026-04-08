@@ -7,7 +7,7 @@ fun main() {
     val bw = System.out.bufferedWriter()
 
     var st = StringTokenizer(br.readLine() ?: "")
-    var N = st.nextToken().toLong()이거
+    var N = st.nextToken().toLong()
     val B = st.nextToken().toInt()
 
     val sb = StringBuilder()
