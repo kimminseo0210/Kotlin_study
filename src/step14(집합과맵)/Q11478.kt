@@ -9,6 +9,9 @@ fun main() {
     // 서로 다른은 HashSet을 사용 ㄱㄱ
     val strSet = HashSet<String>()
 
+    // 문자 확인
+    val sb = StringBuilder()
+
     // substring(a,b) 문자열을 a~b 까지 자름
     // 자르기 시작할 위치
     for ( i in 0 until inputStr.length ) {
@@ -16,11 +19,15 @@ fun main() {
         for (j in i+1.. inputStr.length ) {
             var cutWord = inputStr.substring(i, j)
 
+            sb.append(cutWord).append(" ")
+
             strSet.add(cutWord)
         }
     }
 
     bw.write((strSet.size).toString())
+    bw.newLine()
+    bw.write(sb.toString())
 
     bw.flush()
     bw.close()
