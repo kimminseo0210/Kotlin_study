@@ -1,0 +1,12 @@
+/* --- 전역 유틸리티 영역 (실무 스타일 템플릿) --- */
+
+// 1. Int 안전하게 가져오기
+fun StringTokenizer.nextIntSafe(): Int =
+    if (this.hasMoreTokens()) this.nextToken().toIntOrNull() ?: 0 else 0
+
+// 2. Long 안전하게 가져오기
+fun StringTokenizer.nextLongSafe(): Long =
+    if (this.hasMoreTokens()) this.nextToken().toLongOrNull() ?: 0L else 0L
+
+// 3. GCD (실무에서도 유틸 함수로 자주 뺍니다)
+fun getGCD(a: Long, b: Long): Long = if (b == 0L) a else getGCD(b, a % b)
